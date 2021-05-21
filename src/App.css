@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  width: 100%;
+  height: 100%;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center; 
+  justify-content: center; 
+  background-color: rgb(252, 248, 248);
 }
 
-.App-link {
-  color: #61dafb;
+.app .intelligence {
+  width: 500px;
+  height: 70px;
+  font-size: 20px;
+  color: wheat;
+  border: 1px solid rgb(253, 251, 251);
+  border-radius: 5px;
+  background-color: rgb(22, 48, 73);
+  display: flex ;
+  align-items: center;
+  justify-content: center; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app .intelligence button {
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
   }
-  to {
-    transform: rotate(360deg);
+  @keyframes glowing {
+  0% { background-color: #c50a0a; box-shadow: 0 0 5px #c50a0a; }
+  50% { background-color: #f70b0b; box-shadow: 0 0 20px #f70b0b; }
+  100% { background-color: #9c0808; box-shadow: 0 0 5px #9c0808; }
   }
+  .app .intelligence button {
+  animation: glowing 1300ms infinite;
+  }
+
+.app-container{
+  width: 500px;
+  text-align: center;
+  font-size: 25px;
+  border: 1px solid rgb(253, 251, 251);
+  border-radius: 5px;
+  background-color: rgb(22, 48, 73);
+  color: wheat;
+}
+
+.active-user {
+  max-width: 100%;
+  border-bottom: 1px solid rgb(247, 246, 246);
+  padding: 2px;
+}
+
+.playground-wrapper {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 15px;
+  
+}
+
+.btn-wrapper {
+  border-top: 1px solid rgb(253, 252, 252);
+  padding: 5px;
+}
+
+.app .btn-wrapper button {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  font-size: 35px;
+  border-radius: 50%;
+  margin-left: 10px;
+  background: rgb(252, 248, 248);
+  color: rgb(22, 48, 73);
+}
+
+.app .btn-wrapper button:disabled { 
+  background: rgba(252, 248, 248, 0.507);
+}
+
+.eclipse {
+  background: rgba(102, 102, 102, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.app .hide {
+  display: none;
+}
+
+.app .showWinner {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+  padding: 15px;
+  color: rgb(240, 240, 240);
+  display: block;
+  position: absolute;
+  background: rgba(102, 102, 102, 0.8);
+}
+
+.app .showWinner .modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  margin-top: 10%;
+  font-size: 40px;
+}
+
+.app .showWinner .modal button {
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  width: 100px;
+  font-size: 35px;
+  border-radius: 10px;
+  background: rgb(252, 248, 248);
+  color: rgb(22, 48, 73);
+}
+
+.app .showWinner .modal button:hover {
+  background: rgba(22, 48, 73, 0.8);
+  color: rgb(252, 248, 248);
 }
