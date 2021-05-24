@@ -3,12 +3,14 @@ const emoji = require("emoji-dictionary");
 const item = emoji.getUnicode("exclamation");
 
 const User = ({ matches, user }) => {
+    // debugger;
     return (
         <div>
             <div>
                 {user === 1 ? <span>Your matches: </span> : <span>Computer matches: </span>}
-                {matches.map((elem, i) => <span key={i}>{item}</span>)}
-                {matches.length ? matches.length : null}
+                {[...Array(matches).keys()].map((elem, i) => <span key={i}>{item}</span>)}
+                {/* {matches.map((elem, i) => <span key={i}>{item}</span>)} */}
+                {matches ? matches : null}
             </div>
 
         </div>

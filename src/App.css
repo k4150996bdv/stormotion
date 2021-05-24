@@ -11,7 +11,7 @@
 }
 
 .app .intelligence {
-  width: 500px;
+  width: 600px;
   height: 70px;
   font-size: 20px;
   color: wheat;
@@ -45,7 +45,7 @@
   }
 
 .app-container{
-  width: 500px;
+  width: 600px;
   text-align: center;
   font-size: 25px;
   border: 1px solid rgb(253, 251, 251);
@@ -61,7 +61,7 @@
 }
 
 .playground-wrapper {
-  max-width: 500px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
